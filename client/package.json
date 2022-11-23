@@ -11,7 +11,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
     "react-router-dom": "6.4.3",
-    "axios": "1.1.3"
+    "axios": ""
   },
   "scripts": {
     "start": "WATCHPACK_POLLING=true react-scripts start",
@@ -36,5 +36,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }
   }
 }
