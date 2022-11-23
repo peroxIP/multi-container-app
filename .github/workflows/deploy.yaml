@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - run: docker build -t istvanpetelevi9/react-test -f ./client/Dockerfile.dev ./client
-      - run: docker run -e CI=true istvanpetelevi9/react-test npm test
+      - run: docker run -e CI=true istvanpetelevi9/react-test npm test -- --coverage
  
       - run: docker build -t istvanpetelevi9/multi-client ./client
       - run: docker build -t istvanpetelevi9/multi-nginx ./nginx
